@@ -14,7 +14,7 @@ function newCocktail(req, res) {
 
 function index(req, res) {
     // Cocktail.find({}, function (err, cocktails) {
-        res.render('cocktails/index');
+        res.render('cocktails/catalog');
     // });
 }
 
