@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session');
+var passport = require('passport');
 var methodOverride = require('method-override');
 
 var indexRouter = require('./routes/index');
@@ -11,7 +12,7 @@ var cocktailsRouter = require('./routes/cocktails');
 
 require('dotenv').config();
 require('./config/database');
-// require('./config/passport');
+require('./config/passport');
 
 
 
@@ -32,6 +33,12 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(function (req, res, next) {
+  res.locals.user = req.user;
+  next();
+});
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
