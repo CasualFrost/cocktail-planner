@@ -1,14 +1,16 @@
 const express = require('express');
 const router = express.Router();
 const cocktailsCtrl = require('../controllers/cocktails');
+const isLoggedIn = require('../config/auth');
+
 
 // All paths in this router have "/cocktails" prefixed to them
 
 // GET "/movies/new" - New Route
-router.get('/new', cocktailsCtrl.new);
+router.get('/new', isLoggedIn, cocktailsCtrl.new);
 
 // POST "/cocktails" - Create Route
-router.post('/', cocktailsCtrl.create);
+router.post('/', isLoggedIn, cocktailsCtrl.create);
 
 // GET "/cocktails" - Index Route
 router.get('/', cocktailsCtrl.index);
