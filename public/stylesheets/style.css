@@ -1,10 +1,48 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  background-color: #B8C0C2;
+  grid-template-rows: 70px 1fr;
+  grid-template-areas: 
+    "nav"
+    "main"
+}
+h1 {
+  padding-right: 50px;
+}
+
+body > nav {
+  grid-area: nav;
+  background-color: white;
+  display: flex;
+  justify-content: flex-end;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 0 20px 0 30px;
+}
+
+.logo {
+  display: flex;
+  margin-right: auto;
+
+}
+
+.space {
+  padding-right: 10px;
+}
+.spaceten {
+  padding-right: 500px;
+}
+
+div > img {
+  width: 60px;
+  object-fit: contain;
 }
 
 a {
-  color: #00B7FF;
+  color: #878f91;
+  text-decoration: none;
 }
 
 .login {
@@ -16,4 +54,68 @@ a {
 
 .login img {
   height: 30px;
+}
+
+a {
+  padding-right: 20px;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;  
+}
+
+#footer {
+  display: flex;
+  position: absolute;
+  background-color: white;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 10px;
+}
+
+p {
+  padding-top: 5px;
+}
+
+.fontstyle {
+  color: #878f91;
+}
+
+nav > a {
+  margin: 15px;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+
+nav > a:hover:not(.active) {
+  color: white;
+  background-color: #878f91;
+}
+
+nav > a.active {
+  color: black;
+  cursor: default;
+}
+
+table thead th {
+  padding: 5px;
+  border-bottom: 2px solid #424748;
+}
+
+.left {
+  padding-right: 15px;
+}
+
+.right {
+  padding-left: 15px;
 }

@@ -9,13 +9,13 @@ module.exports = {
 };
 
 function newCocktail(req, res) {
-    res.render('cocktails/new');
+    res.render('cocktails/new', { title: 'Create Cocktail' });
 }
 
 function index(req, res) {
-    // Cocktail.find({}, function (err, cocktails) {
-        res.render('cocktails/catalog');
-    // });
+    Cocktail.find({}, function (err, cocktails) {
+        res.render('cocktails/catalog', { title: 'My List', cocktails });
+    });
 }
 
 function show(req, res) {
