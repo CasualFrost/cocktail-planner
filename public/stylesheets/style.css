@@ -2,6 +2,7 @@ body {
   margin: 0;
   height: 100vh;
   display: grid;
+  z-index: 0;
   background-color: #B8C0C2;
   grid-template-rows: 70px 1fr;
   grid-template-areas: 
@@ -71,7 +72,7 @@ a {
 
 #footer {
   display: flex;
-  position: absolute;
+  position: fixed;
   background-color: white;
   bottom: 0;
   width: 100%;
@@ -79,7 +80,22 @@ a {
   justify-content: space-around;
   align-items: center;
   padding-top: 10px;
+  z-index: 1;
 }
+
+#header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 3.5rem;
+  z-index: 1;
+
+}
+
+/* main {
+  padding-top: 80px;
+} */
 
 p {
   padding-top: 5px;
@@ -110,7 +126,9 @@ nav > a.active {
 table thead th {
   padding: 5px;
   border-bottom: 2px solid #424748;
+  width: 1000px;
 }
+
 
 .left {
   padding-right: 15px;
@@ -125,6 +143,40 @@ table thead th {
 }
 
 .mylist {
-  padding-top: 30px;
+  padding-top: 80px;
   padding-left: 30px;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    /* margin-bottom: 20px; */
+  }
 }

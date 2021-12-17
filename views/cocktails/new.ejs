@@ -1,15 +1,26 @@
 <%- include('../partials/header') %>
-<h1>Hello</h1>
-<table class="table table-hover">
-    <thead>
-        <tr>
-            <th>Stronger</th>
-        </tr>
-    </thead>
-        <tbody class="table-primary">
-            <tr>
-                <td>Hello</td>
-            </tr>
-        </tbody>
-</table>
+
+
+<div>
+    <h1 class="mylist">
+        he
+    </h1>
+    <form id="new-form" action="/cocktails" method="POST">
+        <label>Image Url:</label>
+        <input type="text" name="image">
+        <br>
+        <label>Name:</label>
+        <input type="text" name="name">
+        <br>
+        <label>Description:</label>
+        <input type="text" name="description">
+        <br>
+        <label>Ingredient:</label>
+        <input type="text" name="ingredients">
+        <br>
+        <input type="submit" value="Create Cocktail">
+      </form>
+</div>
+
+
 <%- include('../partials/footer') %>

@@ -25,6 +25,7 @@ function show(req, res) {
 }
 
 function create(req, res) {
+
     console.log(req.body);
     const cocktail = new Cocktail(req.body);
     cocktail.save(function (err) {
