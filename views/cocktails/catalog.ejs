@@ -8,7 +8,15 @@
   <thead>
     <tr>
       <th>
-
+        <% cocktails.forEach(function(c) { %>
+          <tr>
+            <td><%= c.image %></td>
+            <td><%= c.name %></td>
+            <td><%= c.description %></td>
+            <td><%= c.ingredients %></td>
+            <td><a href="/cocktails/<%= c._id %>">DETAILS</a></td>
+          </tr>
+          <% }); %>
       </th>
     </tr>
   </thead>
@@ -37,9 +45,12 @@
     <div class="card">..</div>
   </div>
   </div>
-
-
-
+<br>
+  <form id="new-form" action="/lists" method="POST">
+    <label>List Name:</label>
+    <input type="text" name="name">
+    <input type="submit" value="Create List">
+  </form>
 <!-- <table class="table table-striped">
     <thead>
       <tr>

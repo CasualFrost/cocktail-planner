@@ -14,9 +14,9 @@
         <img class="space" src="https://i.imgur.com/tcJByeN.png" alt="">
         <h2 class="fontstyle top">Cocktail Planner</h2>
     </div>
-        <a href="/cocktails" <%- title === 'My List' ? 'class="active"' : '' %>>My List</a>
+        <a href="/lists">My List</a>
         <% if (user) { %>
-          <a href="/cocktails/new" <%- title === 'Create Cocktail' ? 'class="active"' : '' %>>Create Cocktail</a>
+          <a href="/cocktails/new">Create Cocktail</a>
           <a href="/logout">Log Out</a>
         <% } else { %>
           <a href="/auth/google" class="login">Log In&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>

@@ -9,6 +9,7 @@ var methodOverride = require('method-override');
 
 var indexRouter = require('./routes/index');
 var cocktailsRouter = require('./routes/cocktails');
+var listsRouter = require('./routes/lists');
 
 require('dotenv').config();
 require('./config/database');
@@ -43,6 +44,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/cocktails', cocktailsRouter);
+app.use('/lists', listsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+
+
+
+<h1 class="mylist">My lists</h1>
+<ul>
+    <% lists.forEach(function(l) { %>
+        <li><%= l.name %></li>
+    <% }) %>
+</ul>
+
+
+
+
+<%- include('../partials/footer') %>
