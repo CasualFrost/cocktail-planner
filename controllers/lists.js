@@ -14,5 +14,12 @@ function index(req, res) {
 }
 
 function create(req, res) {
-    
+    const list = new List(req.body);
+    list.save(function (err) {
+        if (err) {
+            console.log(err);
+            return res.redirect('/lists');
+        }
+        res.redirect('/lists');
+    });
 }

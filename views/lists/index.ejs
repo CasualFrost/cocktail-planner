@@ -3,13 +3,28 @@
 
 
 <h1 class="mylist">My lists</h1>
-<ul>
-    <% lists.forEach(function(l) { %>
-        <li><%= l.name %></li>
-    <% }) %>
-</ul>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% lists.forEach(function(l) { %>
+            <tr>
+                <td>
+                    <%= l.name %>
+                </td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
 
-
+<form id="new-form" action="/lists" method="POST">
+    <label>List Name:</label>
+    <input type="text" name="name">
+    <input type="submit" value="Create List">
+</form>
 
 
 <%- include('../partials/footer') %>
