@@ -2,39 +2,102 @@
 
 
 
+
 <h1 class="mylist">My lists</h1>
+
+<br><br>
+<form id="new-form" action="/lists" method="POST">
+    <label>List Name:</label>
+    <input type="text" name="name">
+    <input type="submit" value="Create List">
+</form>
+<% lists.forEach(function(l) { %>
+    <%= l.name %>
 <div class="row">
-    <div class="col-sm-4">
-        <% lists.forEach(function(l) { %>
-            <%= l.name %>
+    <div class="column">
         <div class="cardlayout">
                 <div class="cardcontent">
                     <img id="divimg"src="https://i.imgur.com/utD8k6r.jpg" alt="">
                     <h5 class="card-title">Long Island Iced Tea</h5>
-                    <p class="card-text">A Long Island iced tea or Long Island ice tea is a type of alcoholic mixed drink typically made with vodka, tequila, light rum, triple sec, gin, and a splash of cola, which gives the drink the same amber hue as iced tea.</p>
+                    <p class="card-text">The old fashioned is a cocktail made by muddling sugar with bitters and water, adding whiskey, and garnishing with ...</p>
                     <a href="#" class="btn btn-primary">Details</a>
                 </div>
             </div>
-            <br>
+        <br>
+    </div>
+    <div class="column">
             <div class="cardlayout">
                 <div class="cardcontent">
                     <img id="divimg" src="https://i.imgur.com/EJucFsZ.jpg" alt="">
                     <h5 class="card-title">Adios MF</h5>
-                    <p class="card-text">The Adios Motherfucker cocktail (or the AMF drink, in mixed company), despite its vulgar name, is basically just a Long Island Iced Tea with two ingredients swapped: blue curaçao instead of triple sec, and a splash of lemon-lime soda instead of cola.</p>
+                    <p class="card-text">The old fashioned is a cocktail made by muddling sugar with bitters and water, adding whiskey, and garnishing with ...</p>
                     <a href="#" class="btn btn-primary">Details</a>
                 </div>
             </div>
-            <br>
+        <br>
+    </div>
+    <div class="column">
             <div class="cardlayout">
                 <div class="cardcontent">
                     <img id="divimg" src="https://i.imgur.com/JMc7rPj.jpg" alt="">
                     <h5 class="card-title">Old Fashioned</h5>
-                    <p class="card-text">The old fashioned is a cocktail made by muddling sugar with bitters and water, adding whiskey, and garnishing with orange slice or zest and a cocktail cherry. It is traditionally served in an old fashioned glass, which predated the cocktail.</p>
+                    <p class="card-text">The old fashioned is a cocktail made by muddling sugar with bitters and water, adding whiskey, and garnishing with ...</p>
                     <a href="#" class="btn btn-primary">Details</a>
                 </div>
             </div>
-            <% }) %>
+        <br>
     </div>
+    <div class="column">
+        <div class="cardlayout">
+            <div class="cardcontent">
+                <img id="divimg" src="https://i.imgur.com/JMc7rPj.jpg" alt="">
+                <h5 class="card-title">Old Fashioned</h5>
+                <p class="card-text">The old fashioned is a cocktail made by muddling sugar with bitters and water, adding whiskey, and garnishing with ...</p>
+                <a href="#" class="btn btn-primary">Details</a>
+            </div>
+        </div>
+</div>
+<div class="column">
+    <div class="cardlayout">
+        <div class="cardcontent">
+            <img id="divimg" src="https://i.imgur.com/JMc7rPj.jpg" alt="">
+            <h5 class="card-title">Old Fashioned</h5>
+            <p class="card-text">The old fashioned is a cocktail made by muddling sugar with bitters and water, adding whiskey, and garnishing with ...</p>
+            <a href="#" class="btn btn-primary">Details</a>
+        </div>
+    </div>
+</div>
+<div class="column">
+    <div class="cardlayout">
+        <div class="cardcontent">
+            <img id="divimg" src="https://i.imgur.com/JMc7rPj.jpg" alt="">
+            <h5 class="card-title">Old Fashioned</h5>
+            <p class="card-text">The old fashioned is a cocktail made by muddling sugar with bitters and water, adding whiskey, and garnishing with ...</p>
+            <a href="#" class="btn btn-primary">Details</a>
+        </div>
+    </div>
+</div>
+<div class="column">
+    <div class="cardlayout">
+        <div class="cardcontent">
+            <img id="divimg" src="https://i.imgur.com/JMc7rPj.jpg" alt="">
+            <h5 class="card-title">Old Fashioned</h5>
+            <p class="card-text">The old fashioned is a cocktail made by muddling sugar with bitters and water, adding whiskey, and garnishing with ...</p>
+            <a href="#" class="btn btn-primary">Details</a>
+        </div>
+    </div>
+</div>
+<div class="column">
+    <div class="cardlayout">
+        <div class="cardcontent">
+            <img id="divimg" src="https://i.imgur.com/JMc7rPj.jpg" alt="">
+            <h5 class="card-title">Old Fashioned</h5>
+            <p class="card-text">The old fashioned is a cocktail made by muddling sugar with bitters and water, adding whiskey, and garnishing with ...</p>
+            <a href="#" class="btn btn-primary">Details</a>
+        </div>
+    </div>
+</div>
+<% }) %>
 </div>
     <!-- <div class="col-sm-6">
             <% lists.forEach(function(l) { %>
