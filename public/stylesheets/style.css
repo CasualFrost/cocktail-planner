@@ -180,3 +180,20 @@ table thead th {
     /* margin-bottom: 20px; */
   }
 }
+
+.cardcontent {
+  flex: 1 1 auto;
+}
+
+.cardlayout {
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  padding: 5px;
+  text-align: center;
+  background-color: #f1f1f1;
+  border-radius: 20px;
+}
+
+#divimg {
+  width: 150px;
+  border-radius: 10px;
+}
