@@ -191,11 +191,17 @@ table thead th {
   text-align: center;
   background-color: #f1f1f1;
   border-radius: 20px;
+  /* width: 23rem; */
+  margin: 2%;
 }
 
-#divimg {
+.divimg {
   width: 150px;
   border-radius: 10px;
+}
+
+.list-group {
+  margin: 0 2%;
 }
 
 #rowinline {
@@ -215,4 +221,9 @@ table thead th {
     display: inline-flex;
     flex-wrap: wrap;
 }
+}
+
+.cocktail-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 }

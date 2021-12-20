@@ -9,4 +9,6 @@ router.get('/', listsCtrl.index);
 
 router.post('/', listsCtrl.create);
 
+router.post('/:id/cocktails', listsCtrl.addToList);
+
 module.exports = router;
