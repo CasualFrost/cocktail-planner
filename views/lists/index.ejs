@@ -28,6 +28,9 @@
                     <h5 class="card-title"><%= c.name %></h5>
                     <p class="card-text"><%= c.description %></p>
                     <a href="/cocktails/<%= c._id %>" class="btn btn-primary">Details</a>
+                    <form action="/lists/<%= l._id %>/cocktails/<%= c._id %>?_method=DELETE" method="POST">
+                        <button type="submit" class="">Remove</button>
+                      </form>
                 </div>
             </div>
         <% }) %>
@@ -40,6 +43,8 @@
     <input type="text" name="name">
     <input type="submit" value="Create List">
 </form>
+
+
     <!-- <div class="col-sm-6">
             <% lists.forEach(function(l) { %>
         <div class="card">

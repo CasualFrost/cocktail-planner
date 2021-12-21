@@ -11,4 +11,6 @@ router.post('/', listsCtrl.create);
 
 router.post('/:id/cocktails', listsCtrl.addToList);
 
+router.delete('/:id/cocktails/:cid', listsCtrl.removeFromList);
+
 module.exports = router;
