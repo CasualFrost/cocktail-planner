@@ -147,37 +147,32 @@ table thead th {
   padding-left: 30px;
 }
 
-/* Float four columns side by side */
 .column {
   float: left;
   width: 25%;
   padding: 0 10px;
 }
 
-/* Remove extra left and right margins, due to padding in columns */
 .row {margin: 0 -5px;}
 
-/* Clear floats after the columns */
+
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Style the counter cards */
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 16px;
   text-align: center;
   background-color: #f1f1f1;
 }
 
-/* Responsive columns - one column layout (vertical) on small screens */
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
     display: block;
-    /* margin-bottom: 20px; */
   }
 }
 
@@ -191,7 +186,6 @@ table thead th {
   text-align: center;
   background-color: #f1f1f1;
   border-radius: 20px;
-  /* width: 23rem; */
   margin: 2%;
 }
 
@@ -240,4 +234,16 @@ table thead th {
   perspective: 1000px;
   border: red solid 5px;
   background-color: white;
+}
+
+.col-lg-6 {
+  padding-bottom: 50px;
+}
+
+.listcard {
+  background-color: white;
+}
+
+#borderimg {
+  border-radius: 10px;
 }

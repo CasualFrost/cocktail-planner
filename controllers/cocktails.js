@@ -6,6 +6,7 @@ module.exports = {
     show,
     new: newCocktail,
     create,
+    delete: deleteCocktail,
 };
 
 function newCocktail(req, res) {
@@ -41,5 +42,11 @@ function create(req, res) {
             return res.redirect('/cocktails/new');
         }
         res.redirect('/cocktails');
+    });
+}
+
+function deleteCocktail(req, res) {
+    Cocktail.deleteOne({ _id:req.params.id }, function(err, cocktail){
+        res.redirect('/lists');
     });
 }

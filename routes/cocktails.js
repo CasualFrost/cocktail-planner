@@ -18,4 +18,6 @@ router.get('/', cocktailsCtrl.index);
 // GET "/cocktails/:id" - Show Route
 router.get('/:id', cocktailsCtrl.show);
 
+router.delete('/:id', cocktailsCtrl.delete);
+
 module.exports = router;

@@ -4,21 +4,24 @@
 <div class="container col-xxl-8 px-4">
     <div class="row flex-lg-row-reverse align-items-center g-5">
       <div>
-        <img src="https://i.imgur.com/JMc7rPj.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="500" height="300" loading="lazy">
+        <img id="borderimg" src="<%= cocktail.image %>" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="250
+      " loading="lazy">
+        
       </div>
       <div class="col-lg-6">
-        <h1 class="display-5 fw-bold lh-1 mb-3">Old Fashioned</h1>
-        <p class="lead">The old fashioned is a cocktail made by muddling sugar with bitters and water, adding whiskey, and garnishing with orange slice or zest and a cocktail cherry. It is traditionally served in an old fashioned glass, which predated the cocktail.</p>
+        <h1 class="display-5 fw-bold lh-1 mb-3"><%= cocktail.name %></h1>
+        <p class="lead">Description: <%= cocktail.description %></p>
+        <p class="lead">Ingredients: <%= cocktail.ingredients %></p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
           <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Edit</button>
-          <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+          <button type="button" class="btn btn-outline-secondary btn-lg px-4">Remove from list</button>
+          <form action="/cocktails/<%= cocktail._id %>?_method=DELETE" method="POST">
+            <button type="submit" class="btn btn-outline-secondary btn-lg px-4">Delete Cocktail Drink</button>
+          </form>
         </div>
       </div>
     </div>
   </div>
-
-
-
 
 
 
