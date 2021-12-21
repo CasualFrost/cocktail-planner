@@ -30,6 +30,7 @@ body > nav {
 }
 
 .space {
+  width: 70px;
   padding-right: 10px;
 }
 .spaceten {
@@ -37,7 +38,6 @@ body > nav {
 }
 
 div > img {
-  width: 70px;
   object-fit: contain;
 }
 
@@ -226,4 +226,18 @@ table thead th {
 .cocktail-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  height: 610px;
+  width: 595px;
+  margin: auto;
+  grid-column-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  border: red solid 5px;
+  background-color: white;
 }
