@@ -1,3 +1,4 @@
+const cocktail = require("../models/cocktail");
 const Cocktail = require("../models/cocktail");
 
 
@@ -7,7 +8,28 @@ module.exports = {
     new: newCocktail,
     create,
     delete: deleteCocktail,
+    edit: editCocktail,
+    update,
 };
+
+function update(req, res, next) {
+    Cocktail.findOneAndUpdate(
+        {_id: req.params.id, user: req.user._id},
+        req.body,
+        {new: true}, function(err, cocktail) {
+            if (err || !cocktail) return res.redirect('/lists');
+            res.redirect(`/cocktails/${cocktail._id}`);
+        }
+    );
+}
+
+function editCocktail(req, res) {
+    Cocktail.findById(req.params.id, function (err, cocktail){
+        res.render('cocktails/edit', {
+            cocktail
+        });
+    });
+}
 
 function newCocktail(req, res) {
     res.render('cocktails/new', {
@@ -26,6 +48,7 @@ function index(req, res) {
 
 function show(req, res) {
     Cocktail.findById(req.params.id, function (err, cocktail) {
+        console.log(cocktail);
         res.render('cocktails/show', {
             title: 'Cocktail Details',
             cocktail
@@ -34,8 +57,9 @@ function show(req, res) {
 }
 
 function create(req, res) {
-    console.log(req.body);
+    req.body.user = req.user._id;
     const cocktail = new Cocktail(req.body);
+    if (!cocktail.user.equals(req.user._id)) return res.redirect(`/cocktails/${cocktail._id}`);
     cocktail.save(function (err) {
         if (err) {
             console.log(err);
@@ -46,7 +70,9 @@ function create(req, res) {
 }
 
 function deleteCocktail(req, res) {
-    Cocktail.deleteOne({ _id:req.params.id }, function(err, cocktail){
+    cocktail.findById({_id: req.params.id}, function(err, cocktail) {
+        if (!cocktail.user.equals(req.user._id)) return res.redirect(`/cocktails/${cocktail._id}`);
+        cocktail.remove();
         res.redirect('/lists');
     });
 }

@@ -1,0 +1,32 @@
+<%- include('../partials/header') %>
+
+<div>
+    <h1 class="mylist">
+        he
+    </h1>
+    <form id="new-form" action="/cocktails/<%= cocktail._id %>?_method=PUT" method="POST">
+        <label>Image Url:</label>
+        <textarea name="image">
+            <%= cocktail.image %> 
+        </textarea>
+        <br>
+        <label>Name:</label>
+        <textarea name="name">
+            <%= cocktail.name %> 
+        </textarea>
+        <br>
+        <label>Description:</label>
+        <textarea rows="10" cols="25" name="description">
+            <%= cocktail.description %> 
+        </textarea>
+        <br>
+        <label>Ingredient:</label>
+        <textarea rows="10" cols="25" name="ingredients">
+            <%= cocktail.ingredients %> 
+        </textarea>
+        <br>
+        <input type="submit" value="Create Cocktail">
+      </form>
+</div>
+
+<%- include('../partials/footer') %>

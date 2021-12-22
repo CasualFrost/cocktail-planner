@@ -13,10 +13,14 @@
         <p class="lead">Description: <%= cocktail.description %></p>
         <p class="lead">Ingredients: <%= cocktail.ingredients %></p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Edit</button>
+            <% if (user && user._id.equals(cocktail.user)) { %>
+          <a href="/cocktails/<%= cocktail._id %>/edit">
+            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Edit</button>
+          </a>
           <form action="/cocktails/<%= cocktail._id %>?_method=DELETE" method="POST">
             <button type="submit" class="btn btn-outline-secondary btn-lg px-4">Delete Cocktail Drink</button>
           </form>
+          <% }; %>
         </div>
       </div>
     </div>

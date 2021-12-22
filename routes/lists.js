@@ -5,12 +5,12 @@ const isLoggedIn = require('../config/auth');
 
 // All paths in this router have "/lists" prefixed to them
 
-router.get('/', listsCtrl.index);
+router.get('/', isLoggedIn, listsCtrl.index);
 
-router.post('/', listsCtrl.create);
+router.post('/', isLoggedIn, listsCtrl.create);
 
-router.post('/:id/cocktails', listsCtrl.addToList);
+router.post('/:id/cocktails', isLoggedIn, listsCtrl.addToList);
 
-router.delete('/:id/cocktails/:cid', listsCtrl.removeFromList);
+router.delete('/:id/cocktails/:cid', isLoggedIn, listsCtrl.removeFromList);
 
 module.exports = router;

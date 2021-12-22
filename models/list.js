@@ -9,7 +9,11 @@ const listSchema = new Schema({
     cocktails: [{
         type: Schema.Types.ObjectId,
         ref: 'Cocktail'
-    }]
+    }],
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+      },
 });
 
 module.exports = mongoose.model("List", listSchema);

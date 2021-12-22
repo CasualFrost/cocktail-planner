@@ -23,7 +23,7 @@ function addToList(req, res) {
 
 
 function index(req, res) {
-    List.find({}).populate('cocktails').exec(function (err, lists) {
+    List.find({user: req.user._id}).populate('cocktails').exec(function (err, lists) {
         Cocktail.find({}, function(err, cocktails) {
             res.render('lists/index', {
                 lists, cocktails
@@ -33,6 +33,7 @@ function index(req, res) {
 }
 
 function create(req, res) {
+    req.body.user = req.user._id;
     const list = new List(req.body);
     list.save(function (err) {
         if (err) {
