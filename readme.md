@@ -14,10 +14,11 @@ Cocktail Planner is a website where the you're able to create your own personali
 
 1. HTML
 2. CSS
-3. JavaScript
-4. Mongoose
-5. Express.js
-6. Node.js
+3. Bootstrap
+4. JavaScript
+5. Mongoose
+6. Express.js
+7. Node.js
 
 ## Getting Started
 
