@@ -48,7 +48,6 @@ function index(req, res) {
 
 function show(req, res) {
     Cocktail.findById(req.params.id, function (err, cocktail) {
-        console.log(cocktail);
         res.render('cocktails/show', {
             title: 'Cocktail Details',
             cocktail
@@ -65,7 +64,7 @@ function create(req, res) {
             console.log(err);
             return res.redirect('/cocktails/new');
         }
-        res.redirect('/cocktails');
+        res.redirect('/lists');
     });
 }
 
