@@ -6,6 +6,8 @@ Thanks for visiting my [Cocktail Planner](https://cocktail-planner.herokuapp.com
 
 Cocktail Planner is a website where the you're able to create your own personalized lists/cocktails and store them so you can reflect on when needed. The Cocktail Planner also stores other users custom cocktails which you can use for a new experience. The goal is that over time users will collaborate in building the cocktail list and share with one another. This will benefit those new and experienced when it comes to cocktail profiles.
 
+![Cocktail Planner Landing Page](https://i.imgur.com/e3NoUjC.png)
+
 ![Cocktail Planner List Page](https://i.imgur.com/JAgWroJ.png)
 
 ### Technologies Used
@@ -18,6 +20,8 @@ Cocktail Planner is a website where the you're able to create your own personali
 6. Node.js
 
 ## Getting Started
+
+For my planning details visit my [trello board](https://trello.com/b/rYUEx4Ua/project-2)
 
 In order to start using the site, click on this [website link](https://cocktail-planner.herokuapp.com/).
 
