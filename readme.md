@@ -54,7 +54,7 @@ You can also add other users cocktails if they have been created but only the cr
 
 4. Make the site more responsive and mobile friendly.
 
-## Random Facts
+## 5 Cocktail Facts
 
 1. Yes, the Word 'Cocktail' Sounds a Little Dirty — With Good Reason
 The origins of the word "cocktail" are pretty murky — with several competing theories . But spirits historian David Wondrich (nice job, huh?) says the first mention of the word "cocktail" was in a British newspaper in 1798. "Cock-tail" (as the word was styled) was used as a slang term for a ginger drink. Apparently at the time, before a horse sale, a dealer would sometimes put a ginger suppository up the animal's butt, which would cause it to lift its tail, "a raised or cocked-up tail being a sign of a spirited horse," writes Wondrich. Alrighty then.
