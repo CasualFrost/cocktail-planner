@@ -9,7 +9,7 @@
 <% lists.forEach(function(l) { %>
     <div class="listcard">
     <div class="listlist">
-        <%= l.name %>
+        <h4 class="listname"> <%= l.name %> </h4>
         <div class="aligntogether">
         <form id="new-form" action="/lists/<%= l._id %>/cocktails" method="POST">
             <select name="cocktailId">
@@ -19,10 +19,10 @@
                     </option>
                     <%  }) %>
                 </select>
-                <input type="submit" value="Add Drink to List">
+                <input type="submit" class="btn-small button-green" value="Add Drink to List">
             </form>
             <form action="/lists/<%= l._id %>?_method=DELETE" method="POST">
-            <input type="submit" value="Delete List">
+            <input type="submit" class="btn-small button-red" value="Delete List">
             </form>
         </div>
     </div>
@@ -31,12 +31,14 @@
             <div class="cardlayout">
                 <div class="cardcontent">
                     <img class="divimg" src="<%= c.image %>">
-                    <h5 class="card-title"><%= c.name %></h5>
+                    <h5 class="card-title" style="text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;"><%= c.name %></h5>
                     <p class="card-text description"><%= c.description %></p>
                     <div>
-                    <a href="/cocktails/<%= c._id %>" class="btn btn-primary">Details</a>
+                    <a href="/cocktails/<%= c._id %>" class="btn btn-sm btn-outline-primary">Details</a>
                     <form action="/lists/<%= l._id %>/cocktails/<%= c._id %>?_method=DELETE" method="POST">
-                        <button type="submit" class="btn-small btn-danger">Remove</button>
+                        <button type="submit" class="btn btn-sm btn-outline-danger">Remove</button>
                       </form>
                     </div>
                 </div>
@@ -54,7 +56,7 @@
     <form id="new-form" action="/lists" method="POST">
         <label>List Name:</label>
         <input type="text" name="name">
-        <input type="submit" value="Create List">
+        <input type="submit" class="btn-small button-green" value="Create List">
     </form>
 </div>
 <br><br><br><br><br>

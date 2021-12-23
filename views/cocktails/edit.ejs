@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 
 <br>
-<div class="list-group">
+<!-- <div class="list-group">
     <h1 class="mylist">
         he
     </h1>
@@ -28,9 +28,68 @@
         <br>
         <input type="submit" value="Create Cocktail">
       </form>
-</div>
-
-
-
+</div> -->
+<form id="new-form" action="/cocktails/<%= cocktail._id %>?_method=PUT" method="POST">
+<div class="container mytitle">
+    <!-- Section: form gradient -->
+    <section class="form-gradient mb-5">
+    
+        <!--Form with header-->
+        <div class="card">
+      
+          <!--Header-->
+          <div class="header grey-gradient">
+      
+            <div class="row d-flex justify-content-center">
+              <h3 class="white-text mb-0 py-5 font-weight-bold">Contact Us</h3>
+            </div>
+      
+          </div>
+          <!--Header-->
+      
+          <div class="card-body mx-4">
+            <form id="new-form" action="/cocktails" method="POST">
+            <div class="md-form">
+              <i class="fas fa-images prefix grey-text"></i>
+              <input type="text" id="form104" class="form-control" name="image" value="<%= cocktail.image %> ">
+            </div>
+            <br>
+            <div class="md-form">
+              <i class="fas fa-cocktail prefix grey-text"></i>
+              <input type="text" id="form105" style="text-align:left" placeholder="Cocktail Name" class="form-control" name="name" value="<%= cocktail.name %>">
+            </div>
+            <br>
+            <div class="md-form">
+              <i class="fas fa-pencil-alt prefix grey-text"></i>
+              <input type="text" id="form106" placeholder="Description" class="form-control" name="description" value="<%= cocktail.description %>">
+            </div>
+            <br>
+            <div class="md-form">
+              <i class="fas fa-list prefix grey-text"></i>
+              <textarea id="form107" placeholder="Ingredients" class="md-textarea form-control" rows="5" name="ingredients"><%= cocktail.ingredients %></textarea>
+            </div>
+      
+            <!--Grid row-->
+            <div class="row d-flex align-items-center mb-3 mt-4">
+      
+              <!--Grid column-->
+              <div class="col-md-12">
+                <div class="text-center">
+                    <input type="submit" class="btn btn-grey btn-rounded z-depth-1a" value="Edit Cocktail">
+                </div>
+            </form>
+              </div>
+              <!--Grid column-->
+      
+            </div>
+            <!--Grid row-->
+          </div>
+      
+        </div>
+        <!--/Form with header-->
+    </div>
+</form>
+    <br>
+<br><br>
 
 <%- include('../partials/footer') %>
