@@ -15,5 +15,4 @@ router.delete('/:id/cocktails/:cid', isLoggedIn, listsCtrl.removeFromList);
 
 router.delete('/:id', isLoggedIn, listsCtrl.removeList);
 
-
 module.exports = router;

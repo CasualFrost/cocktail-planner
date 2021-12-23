@@ -1,7 +1,4 @@
 <%- include('../partials/header') %>
-
-
-
 <br>
 <h1 class="mylist">My lists</h1>
 <br>
@@ -11,8 +8,8 @@
     <div class="listlist">
         <h4 class="listname"> <%= l.name %> </h4>
         <div class="aligntogether">
-        <form id="new-form" action="/lists/<%= l._id %>/cocktails" method="POST">
-            <select name="cocktailId">
+            <form id="new-form" action="/lists/<%= l._id %>/cocktails" method="POST">
+                <select name="cocktailId">
                 <% cocktails.forEach(function(c) { %>
                     <option value="<%= c._id %>"> 
                         <%= c.name %>
@@ -22,7 +19,7 @@
                 <input type="submit" class="btn-small button-green" value="Add Drink to List">
             </form>
             <form action="/lists/<%= l._id %>?_method=DELETE" method="POST">
-            <input type="submit" class="btn-small button-red" value="Delete List">
+                <input type="submit" class="btn-small button-red" value="Delete List">
             </form>
         </div>
     </div>
@@ -36,9 +33,9 @@
                     overflow: hidden;"><%= c.name %></h5>
                     <p class="card-text description"><%= c.description %></p>
                     <div>
-                    <a href="/cocktails/<%= c._id %>" class="btn btn-sm btn-outline-primary">Details</a>
-                    <form action="/lists/<%= l._id %>/cocktails/<%= c._id %>?_method=DELETE" method="POST">
-                        <button type="submit" class="btn btn-sm btn-outline-danger">Remove</button>
+                        <a href="/cocktails/<%= c._id %>" class="btn btn-sm btn-outline-primary">Details</a>
+                        <form action="/lists/<%= l._id %>/cocktails/<%= c._id %>?_method=DELETE" method="POST">
+                            <button type="submit" class="btn btn-sm btn-outline-danger">Remove</button>
                       </form>
                     </div>
                 </div>
@@ -48,10 +45,7 @@
     </div>
 <% }) %>
 </div>
-<br>
-
-
-<br><br>
+<br><br><br>
 <div class="list-group">
     <form id="new-form" action="/lists" method="POST">
         <label>List Name:</label>
@@ -60,6 +54,4 @@
     </form>
 </div>
 <br><br><br><br><br>
-
-
 <%- include('../partials/footer') %>

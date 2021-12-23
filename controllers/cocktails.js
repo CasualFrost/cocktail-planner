@@ -1,7 +1,6 @@
 const cocktail = require("../models/cocktail");
 const Cocktail = require("../models/cocktail");
 
-
 module.exports = {
     index,
     show,
