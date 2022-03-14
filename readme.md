@@ -4,7 +4,7 @@ Thanks for visiting my [Cocktail Planner](https://cocktail-planner.herokuapp.com
 
 ## Description
 
-Cocktail Planner is a website where the you're able to create your own personalized lists/cocktails and store them so you can reflect on when needed. The Cocktail Planner also stores other users custom cocktails which you can use for a new experience. The goal is that over time users will collaborate in building the cocktail list and share with one another. This will benefit those new and experienced when it comes to cocktail profiles.
+Cocktail Planner is a website where you're able to create your own personalized lists/cocktails and store them so you can reflect on when needed. The Cocktail Planner also stores other users custom cocktails which you can use for a new experience. The goal is that over time users will collaborate in building the cocktail list and share with one another. This will benefit those new and experienced when it comes to cocktail profiles.
 
 ![Cocktail Planner Landing Page](https://i.imgur.com/e3NoUjC.png)
 
